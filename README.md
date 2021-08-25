@@ -44,11 +44,11 @@ Estas duas alterações, fizeram com que o modelo (ainda regressão logística),
 
 Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost, para fazer a classificação. Usei a biblioteca caret, para construir vários modelo de Machine Learning automaticamente (AutoML), e abaixo está um resumo dos modelos. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
 
-![image](https://user-images.githubusercontent.com/66805980/130838843-b1f2cd3b-aeb8-42a5-b365-1b0a5a7c4aab.png)
+   ![image](https://user-images.githubusercontent.com/66805980/130838843-b1f2cd3b-aeb8-42a5-b365-1b0a5a7c4aab.png)
 
 Então, seguindo a lógica proposta em que melhor modelo é o que consegue prever melhor o churn (mesmo se tiver uma acurácia geral menor), o modelo de Linear Discrimant Analysis (LDA) teve o melhor resultado. Abaixo temos o comparativo dos acertos e erros do modelo.
 
-![image](https://user-images.githubusercontent.com/66805980/130839170-f8ad57aa-c560-4640-8b67-c9330c9c8070.png)
+   ![image](https://user-images.githubusercontent.com/66805980/130839170-f8ad57aa-c560-4640-8b67-c9330c9c8070.png)
 
 Mesmo que tenhamos um alto número de clientes que não entrariam em Churn como sendo classificados em Churn, não teremos um impacto tão grande quanto classificar pessoas em Churn errado.
 
