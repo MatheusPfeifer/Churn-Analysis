@@ -36,13 +36,13 @@ Na pasta de script, será encontrado o arquivo com toda a análise dos dados e a
 ## 4. Modelo de Machine Learning
 Para avaliar o melhor modelo de Machine Learning, começei construindo um modelo simples de Regressão Logística para servir como baseline, e posteriormente fui fazendo alterações no conjunto de dados e verificando as melhoras ou pioras do modelo.
 
-Já no primeiro modelo, foi verificado um problema comum em modelos de ML, é o desbalanceamento de classes, sem considerar isso o modelo acertou apenas 5% dos casos de Churn mas acertou 97% nos casos que não houve Churn, ficando com uma acurácia total de 79%. Após o primeiro modelo, realizei alguns pré-processamento nos dados que foram:
-- OverSampling (SMOTE)
-- Normalização dos dados
+Já no primeiro modelo, foi verificado um problema comum em modelos de ML, é o desbalanceamento de classes, em que o modelo aprende muito bem uma classe com muitos dados (no caso pessoas que não entraram em churn - 80%) mas não apredende a classe com menos dados (pessoas que entraram em churn - 20%). Sendo assim, modelo acertou apenas 5% dos casos de Churn mas acertou 97% nos casos que não houve Churn, ficando com uma acurácia total de 79%. Então, após o primeiro modelo, realizei alguns pré-processamento nos dados que foram:
+- OverSampling (SMOTE) - cria dados sintéticos utilizando estatística para balancear classe que tem menos dados
+- Normalização dos dados - ajuda o treinamento do modelo
 
-Estas duas alterações, fizeram com que o modelo (ainda regressão logística), fosse de 5% de acerto para 69% de acerto nos casos de churn, evidenciando a importância no tratamento dos dados em Machine Learning. Porém, a acurácia caiu um pouco de 79% para 72%, ou seja, o modelo está classificando alguns casos que não são de churn como sendo.
+Estas duas alterações, fizeram com que o modelo (ainda regressão logística), fosse de 5% de acerto para 69% de acerto nos casos de churn, evidenciando a importância no tratamento dos dados em Machine Learning. Porém, a acurácia caiu um pouco de 79% para 72%, ou seja, o modelo está classificando alguns casos que não são de churn como sendo, mas isso não é problema visto que o nosso objetivo é identificar clientes em churn.
 
-Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost, para fazer a classificação dos dados. Também a biblioteca caret, para construir vários modelo de Machine Learning automaticamente, e abaixo está um resumo dos modelos. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
+Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost, para fazer a classificação. Usei a biblioteca caret, para construir vários modelo de Machine Learning automaticamente (AutoML), e abaixo está um resumo dos modelos. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
 
 ![image](https://user-images.githubusercontent.com/66805980/130838843-b1f2cd3b-aeb8-42a5-b365-1b0a5a7c4aab.png)
 
@@ -51,3 +51,6 @@ Então, seguindo a lógica proposta em que melhor modelo é o que consegue preve
 ![image](https://user-images.githubusercontent.com/66805980/130839170-f8ad57aa-c560-4640-8b67-c9330c9c8070.png)
 
 Mesmo que tenhamos um alto número de clientes que não entrariam em Churn como sendo classificados em Churn, não teremos um impacto tão grande quanto classificar pessoas em Churn errado.
+
+## 5. Resultado de negócio
+
