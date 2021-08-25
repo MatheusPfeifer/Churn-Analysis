@@ -1,2 +1,53 @@
-# Churn-Analysis
-Este repositório aborda uma solução de Machine Learning para identificar clientes de uma instituição bancária que podem estar em condição de Churn.
+# Análise de Churn
+
+## 1. Contexto
+Um problema que acontece em praticamente todas as empresas que oferecem algum tipo de serviço é o Churn. O Churn é caracterizado basicamente quando um cliente que utilizava algum serviço para de utilizar. Por exemplo, um determinado cliente de uma operadora de telefone cancela o seu chip, é dito que esse cliente está Churn.
+
+Pensando nessa maneira, toda empresa quer evitar de perder clientes, porque se uma empresa tiver uma alta taxa de Churn pode acontecer das receitas cairem drasticamente, além do mais é mais caro tentar adquirir novos clientes, através de campanhas de marketing por exemplo, do que manter os clientes antigos.
+
+Uma das possível soluções é poder prever quais clientes podem ser classificados como candidatos a entrarem em Churn, a partir de dados de clientes antigos. Então, aí que entra o Machine Learning, utilizando aprendizado de máquina podemos treinar um algoritmo para identificar padrões em clientes que pararam de utilizar ou não os serviços, e aplicar para novos clientes. Com as previsões dos clientes que foram classificados como Churn, pode-se tentar oferecer algum tipo de benefício que fará com que o cliente não deixe de utilizar o serviço.
+
+Trazendo para o contexto do nosso problema de negócio, estamos tentando predizer quais clientes poderão parar de utilizar o serviço de uma instituição bancária e oferecer alguma solução de negócio.
+
+Os dados para o problema são encontrado em: https://www.kaggle.com/mervetorkan/churndataset
+
+## 2. Plano de Solução
+Como foi dito anteriormente, iremos utilizar Machine Learning para identificar os clientes que poderão entrar em Churn baseado em dados históricos. O processo de análise foi divido em:
+- Entendimento do problema de negócio
+- Obtenção dos dados
+- Limpeza dos dados
+- Análise exploratória dos dados
+- Pré-processamento dos dados
+- Criação do modelo
+- Avaliação do modelo
+- Entrega da solução
+
+Para a entrega da solução, será fornecida uma tabela com os clientes que foram classificados como Churn, para a equipe de negócio poder avaliar qual a melhor solução a ser tomada para reter o cliente no banco.
+
+## 3. Insights sobre os dados
+Na pasta de script, será encontrado o arquivo com toda a análise dos dados e as principais conclusões tiradas. Aqui terá um resumo dos principais pontos sobre o perfil dos clientes que entraram em Churn:
+- 20% dos clientes entraram em Churn;
+- As mulheres tem maior taxa de Churn do que os homens. A taxa de Churn das mulheres chegam a 25%, enquanto dos homens é de 16,5%;
+- Clientes com muitos produtos no banco tem maior taxa de Churn. Por exemplo, clientes que possuem 4 produtos taxa de Churn de 100% e com 3 produtos 83%, enquanto clientes com 1 produto tem Churn de 27,7% e com 2 produtos 7,6%;
+- A Alemanha é o país que apresenta maior Churn, com mais de 30%, mesmo sendo o país com a menor quantidade de clientes;
+- Clientes entre 50 e 60 anos são os que apresentam maior taxa de Churn, podendo chegar a mais de 50%;
+- Cleintes com baixo score de créditos tem maior propensão a entrar em Churn.
+
+## 4. Modelo de Machine Learning
+Para avaliar o melhor modelo de Machine Learning, começei construindo um modelo simples de Regressão Logística para servir como baseline, e posteriormente fui fazendo alterações no conjunto de dados e verificando as melhoras ou pioras do modelo.
+
+Já no primeiro modelo, foi verificado um problema comum em modelos de ML, é o desbalanceamento de classes, sem considerar isso o modelo acertou apenas 5% dos casos de Churn mas acertou 97% nos casos que não houve Churn, ficando com uma acurácia total de 79%. Após o primeiro modelo, realizei alguns pré-processamento nos dados que foram:
+- OverSampling (SMOTE)
+- Normalização dos dados
+
+Estas duas alterações, fizeram com que o modelo (ainda regressão logística), fosse de 5% de acerto para 69% de acerto nos casos de churn, evidenciando a importância no tratamento dos dados em Machine Learning. Porém, a acurácia caiu um pouco de 79% para 72%, ou seja, o modelo está classificando alguns casos que não são de churn como sendo.
+
+Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost, para fazer a classificação dos dados. Também a biblioteca caret, para construir vários modelo de Machine Learning automaticamente, e abaixo está um resumo dos modelos. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
+
+![image](https://user-images.githubusercontent.com/66805980/130838843-b1f2cd3b-aeb8-42a5-b365-1b0a5a7c4aab.png)
+
+Então, seguindo a lógica proposta em que melhor modelo é o que consegue prever melhor o churn (mesmo se tiver uma acurácia geral menor), o modelo de Linear Discrimant Analysis (LDA) teve o melhor resultado. Abaixo temos o comparativo dos acertos e erros do modelo.
+
+![image](https://user-images.githubusercontent.com/66805980/130839170-f8ad57aa-c560-4640-8b67-c9330c9c8070.png)
+
+Mesmo que tenhamos um alto número de clientes que não entrariam em Churn como sendo classificados em Churn, não teremos um impacto tão grande quanto classificar pessoas em Churn errado.
