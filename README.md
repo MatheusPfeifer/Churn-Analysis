@@ -42,7 +42,7 @@ Já no primeiro modelo, foi verificado um problema comum em modelos de ML, é o 
 
 Estas duas alterações, fizeram com que o modelo (ainda regressão logística), fosse de 5% de acerto para 69% de acerto nos casos de churn, evidenciando a importância no tratamento dos dados em Machine Learning. Porém, a acurácia caiu um pouco de 79% para 72%, ou seja, o modelo está classificando alguns casos que não são de churn como sendo, mas isso não é problema visto que o nosso objetivo é identificar clientes em churn.
 
-Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost, para fazer a classificação. Usei a biblioteca caret, para construir vários modelo de Machine Learning automaticamente (AutoML), e abaixo está um resumo dos modelos. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
+Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost para fazer a classificação. Usei a biblioteca Pycaret, para construir vários modelo de Machine Learning automaticamente (AutoML), e abaixo está um resumo dos modelos que apresentaram melhor performance. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
 
    ![image](https://user-images.githubusercontent.com/66805980/130838843-b1f2cd3b-aeb8-42a5-b365-1b0a5a7c4aab.png)
 
