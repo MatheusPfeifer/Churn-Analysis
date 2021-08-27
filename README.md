@@ -62,3 +62,10 @@ Sendo assim, com o final deste projeto, foi possível observar que uma empresa q
 A respeito da solução temos diversos algoritmos de ML no mercado e passar por todos eles dentro de um projeto é praticamente impossível, para isso foi utilizado a biblioteca do Pycaret que aborda 18 algoritmos de classificação e obter o melhor para a nossa análise. Também foi possível observar o quanto um conjunto de dados com classes desbalanceadas pode impactar negativamente o modelo. Porém, no final foi possível entregar uma boa solução ao cliente.
 
 Para próximos passos, poderia ser feito o deploy do modelo em nuvem ou uma solução utilizando streamlit ou flask por exemplo.
+
+## 7. Referências
+https://www.flai.com.br/juscudilio/parte-i-como-aplicar-machine-learning-para-reduzir-o-churn/
+https://sejaumdatascientist.com/predicao-de-churn/
+https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+https://pycaret.org
+https://medium.com/kunumi/métricas-de-avaliação-em-machine-learning-classificação-49340dcdb198
