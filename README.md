@@ -64,8 +64,8 @@ A respeito da solução temos diversos algoritmos de ML no mercado e passar por 
 Para próximos passos, poderia ser feito o deploy do modelo em nuvem ou uma solução utilizando streamlit ou flask por exemplo.
 
 ## 7. Referências
-https://www.flai.com.br/juscudilio/parte-i-como-aplicar-machine-learning-para-reduzir-o-churn/
-https://sejaumdatascientist.com/predicao-de-churn/
-https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
-https://pycaret.org
-https://medium.com/kunumi/métricas-de-avaliação-em-machine-learning-classificação-49340dcdb198
+- https://www.flai.com.br/juscudilio/parte-i-como-aplicar-machine-learning-para-reduzir-o-churn/
+- https://sejaumdatascientist.com/predicao-de-churn/
+- https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+- https://pycaret.org
+- https://medium.com/kunumi/métricas-de-avaliação-em-machine-learning-classificação-49340dcdb198
