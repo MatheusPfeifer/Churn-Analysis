@@ -31,7 +31,7 @@ Na pasta de script, será encontrado o arquivo com toda a análise dos dados e a
 - Clientes com muitos produtos no banco tem maior taxa de Churn. Por exemplo, clientes que possuem 4 produtos taxa de Churn de 100% e com 3 produtos 83%, enquanto clientes com 1 produto tem Churn de 27,7% e com 2 produtos 7,6%;
 - A Alemanha é o país que apresenta maior Churn, com mais de 30%, mesmo sendo o país com a menor quantidade de clientes;
 - Clientes entre 50 e 60 anos são os que apresentam maior taxa de Churn, podendo chegar a mais de 50%;
-- Cleintes com baixo score de créditos tem maior propensão a entrar em Churn.
+- Clientes com baixo score de créditos tem maior propensão a entrar em Churn.
 
 ## 4. Modelo de Machine Learning
 Para avaliar o melhor modelo de Machine Learning, começei construindo um modelo simples de Regressão Logística para servir como baseline, e posteriormente fui fazendo alterações no conjunto de dados e verificando as melhoras ou pioras do modelo.
