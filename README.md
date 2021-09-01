@@ -42,11 +42,11 @@ Já no primeiro modelo, foi verificado um problema comum em modelos de ML, é o 
 
 Estas duas alterações, fizeram com que o modelo (ainda regressão logística), fosse de 5% de acerto para 69% de acerto nos casos de churn, evidenciando a importância no tratamento dos dados em Machine Learning. Porém, a acurácia caiu um pouco de 79% para 72%, ou seja, o modelo está classificando alguns casos que não são de churn como sendo, mas isso não é problema visto que o nosso objetivo é identificar clientes em churn.
 
-Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost para fazer a classificação. Usei a biblioteca Pycaret, para construir vários modelo de Machine Learning automaticamente (AutoML), e abaixo está um resumo dos modelos que apresentaram melhor performance. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall para casos com Churn, justamente para avaliar o comportamento dos casos de Churn que o modelo acertou.
+Seguindo o processo de criação de modelos, criei um modelo de RandomForest e XGBoost para fazer a classificação, e não apresentaram grande melhoras na performance no modelo como vemos na tabela abaixo. E por último usei a biblioteca Pycaret, para construir vários modelos de Machine Learning automaticamente (AutoML), e abaixo está um resumo dos modelos que apresentaram melhor performance. A métrica que foi levada em conta para escolha do melhor modelo foi o Recall, justamente para avaliar o resultado do modelo para casos de Churn.
 
    ![image](https://user-images.githubusercontent.com/66805980/130838843-b1f2cd3b-aeb8-42a5-b365-1b0a5a7c4aab.png)
 
-Então, seguindo a lógica proposta em que melhor modelo é o que consegue prever melhor o churn (mesmo se tiver uma acurácia geral menor), o modelo de Linear Discrimant Analysis (LDA) teve o melhor resultado. Abaixo temos o comparativo dos acertos e erros do modelo.
+Então, seguindo a lógica proposta em que melhor modelo é o que consegue prever melhor o churn (mesmo se tiver uma acurácia geral menor), o modelo de Linear Discrimant Analysis (LDA) teve o melhor resultado, acertou 76% dos casos com churn. Abaixo temos o comparativo dos acertos e erros do modelo.
 
    ![image](https://user-images.githubusercontent.com/66805980/130839170-f8ad57aa-c560-4640-8b67-c9330c9c8070.png)
 
@@ -59,7 +59,7 @@ Esses 1541 clientes tem uma renda anual de $105,816,985.00 de dólares. Desta fo
 
 ## 6. Conclusão
 Sendo assim, com o final deste projeto, foi possível observar que uma empresa que aplica modelos de Machine Learning para classificar clientes em churn pode ser mais bem sucedida no mercado.
-A respeito da solução temos diversos algoritmos de ML no mercado e passar por todos eles dentro de um projeto é praticamente impossível, para isso foi utilizado a biblioteca do Pycaret que aborda 18 algoritmos de classificação e obter o melhor para a nossa análise. Também foi possível observar o quanto um conjunto de dados com classes desbalanceadas pode impactar negativamente o modelo. Porém, no final foi possível entregar uma boa solução ao cliente.
+A respeito da solução temos diversos algoritmos de ML no mercado e passar por todos eles dentro de um projeto é praticamente impossível, para isso foi utilizado a biblioteca do Pycaret que aborda 18 algoritmos de classificação e foi obtido o melhor para a nossa análise. Também foi possível observar o quanto um conjunto de dados com classes desbalanceadas pode impactar negativamente o modelo. Porém, no final foi possível entregar uma boa solução ao cliente.
 
 Para próximos passos, poderia ser feito o deploy do modelo em nuvem ou uma solução utilizando streamlit ou flask por exemplo.
 
