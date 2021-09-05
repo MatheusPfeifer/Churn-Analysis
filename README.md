@@ -50,7 +50,7 @@ Então, seguindo a lógica proposta em que melhor modelo é o que consegue preve
 
    ![image](https://user-images.githubusercontent.com/66805980/130839170-f8ad57aa-c560-4640-8b67-c9330c9c8070.png)
 
-Mesmo que tenhamos um alto número de clientes que não entrariam em Churn como sendo classificados em Churn, não teremos um impacto tão grande quanto classificar pessoas em Churn errado.
+A matriz acima, mostra que para o caso sem churn, o modelo acertou 1819 de 2394, e acertou 459 de 607 para os casos de churn. Mesmo que tenhamos um alto número de clientes que não entrariam em Churn como sendo classificados em Churn, não teremos um impacto tão grande quanto classificar pessoas em Churn errado.
 
 ## 5. Resultado de negócio
 Por último, será avaliado quanto que o modelo geraria de valor ao negócio. Quando o modelo foi testado em novos dados, que não foram usados para treinamento, o modelo acertou 1541  de 2037 casos de churn, ou seja, 75,7% dos casos. Dessa forma, a empresa poderia ter intervido nessa pessoas e ter evitado perder muitos clientes, oferecendo produtos ou benefícios para esses clientes.
