@@ -27,8 +27,8 @@ Para a entrega da solução, será fornecida uma tabela com os clientes que fora
 ## 3. Insights sobre os dados
 Na pasta de script, será encontrado o arquivo com toda a análise dos dados e as principais conclusões tiradas. Aqui terá um resumo dos principais pontos sobre o perfil dos clientes que entraram em Churn:
 - 20% dos clientes entraram em Churn;
-- As mulheres tem maior taxa de Churn do que os homens. A taxa de Churn das mulheres chegam a 25%, enquanto dos homens é de 16,5%;
-- Clientes com muitos produtos no banco tem maior taxa de Churn. Por exemplo, clientes que possuem 4 produtos taxa de Churn de 100% e com 3 produtos 83%, enquanto clientes com 1 produto tem Churn de 27,7% e com 2 produtos 7,6%;
+- As mulheres tem maior taxa de Churn do que os homens. A taxa de Churn das mulheres chega a 25%, enquanto dos homens é de 16,5%;
+- Clientes com muitos produtos no banco tem maior taxa de Churn. Por exemplo, clientes que possuem 4 produtos têm uma taxa de Churn de 100% e com 3 produtos 83%, enquanto clientes com 1 produto tem Churn de 27,7% e com 2 produtos 7,6%;
 - A Alemanha é o país que apresenta maior Churn, com mais de 30%, mesmo sendo o país com a menor quantidade de clientes;
 - Clientes entre 50 e 60 anos são os que apresentam maior taxa de Churn, podendo chegar a mais de 50%;
 - Clientes com baixo score de créditos tem maior propensão a entrar em Churn.
@@ -55,10 +55,10 @@ A matriz acima, mostra que para o caso sem churn, o modelo acertou 1819 de 2394,
 ## 5. Resultado de negócio
 Por último, será avaliado quanto que o modelo geraria de valor ao negócio. Quando o modelo foi testado em novos dados, que não foram usados para treinamento, o modelo acertou 1541  de 2037 casos de churn, ou seja, 75,7% dos casos. Dessa forma, a empresa poderia ter intervido nessa pessoas e ter evitado perder muitos clientes, oferecendo produtos ou benefícios para esses clientes.
 
-Portanto, podemos considerar que o modelo encontrado conseguiu atender bem as demandas do banco, mas que claro conforme for surgindo mais dados podemos aprimorar ainda mais o modelo.
+Portanto, podemos considerar que o modelo construído consegue gerar valor para o negócio, mas que claro conforme for surgindo mais dados podemos aprimorar ainda mais o modelo.
 
 ## 6. Conclusão
-Sendo assim, com o final deste projeto, foi possível observar que uma empresa que aplica modelos de Machine Learning para classificar clientes em churn pode ser mais bem sucedida no mercado.
+Sendo assim, com o final deste projeto, foi possível observar que uma empresa que aplica modelos de Machine Learning para prever clientes que podem entrar em churn pode ser mais bem sucedida no mercado.
 A respeito da solução temos diversos algoritmos de ML no mercado e passar por todos eles dentro de um projeto é praticamente impossível, para isso foi utilizado a biblioteca do Pycaret que aborda 18 algoritmos de classificação e foi obtido o melhor para a nossa análise. Também foi possível observar o quanto um conjunto de dados com classes desbalanceadas pode impactar negativamente o modelo. Porém, no final foi possível entregar uma boa solução ao cliente.
 
 Para próximos passos, poderia ser feito o deploy do modelo em nuvem ou uma solução utilizando streamlit ou flask por exemplo.
